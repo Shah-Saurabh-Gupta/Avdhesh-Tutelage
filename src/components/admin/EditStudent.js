@@ -25,12 +25,12 @@ const EditStudent = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.put(`http://localhost:5000/admin/${id}`, user);
+    await axios.put(`https://pedagogy-tutelage.herokuapp.com/admin/${id}`, user);
     history.push("/admin");
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:5000/admin/${id}`);
+    const result = await axios.get(`https://pedagogy-tutelage.herokuapp.com/admin/${id}`);
     setUser(result.data);
   };
   return (
