@@ -13,5 +13,5 @@ function Adminpanel() {
         </div>
     )
 }
-
+cd 
 export default Adminpanel
