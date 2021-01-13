@@ -23,7 +23,7 @@ function AdminResources() {
         setUser(result.data.reverse());
     };
     const deleteUser = async id => {
-        await axios.delete(`https://pedagogy-tutelage.herokuapp.com/files/${id}`);
+        await axios.delete(`https://cors-anywhere.herokuapp.com/https://pedagogy-tutelage.herokuapp.com/files/${id}`);
         loadUsers();
     };
 
@@ -43,7 +43,7 @@ function AdminResources() {
         formData.append("file", fileData);
 
 
-        await axios.post("https://pedagogy-tutelage.herokuapp.com/files", formData,
+        await axios.post("https://cors-anywhere.herokuapp.com/https://pedagogy-tutelage.herokuapp.com/files", formData,
             {
                 onUploadProgress: ProgressEvent => {
                     setUploadPercentage(parseInt(Math.round((ProgressEvent.loaded * 100) /
