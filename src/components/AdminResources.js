@@ -89,7 +89,7 @@ function AdminResources() {
                                     <th scope="row">{index + 1}</th>
                                     <td>{user.filename}</td>
                                     <td>
-                                        <div className="btn btn-danger" onClick={() => deleteUser(user._id)}>Delete</div>
+                                    <Link className="btn btn-danger" to="/admin" onClick={() => deleteUser(user._id)}>Delete</Link>
                                     </td>
                                 </tr>
                             ))}
